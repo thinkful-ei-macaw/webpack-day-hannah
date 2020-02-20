@@ -1,10 +1,12 @@
 import $ from 'jquery';
+import cuid from 'cuid';
+import './index.css';
+import shoppingList from './shopping-list';
 
-function main() {
-  console.log('DOM is loaded');
 
-  const startMsg = $('<p>Webpack is working!</p>');
-  $('#root').append(startMsg);
-}
+const main = function () {
+  shoppingList.bindEventListeners();
+  shoppingList.render();
+};
 
 $(main);
